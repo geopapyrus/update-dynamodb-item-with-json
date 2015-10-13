@@ -15,9 +15,7 @@
             nameMap.put("#attritubeName"+i, (String)pair.getKey()); 
             valueMap.put(":val"+i, pair.getValue());
 
-
             if(it.hasNext()) expression=expression+",";
-
 
             it.remove();
             i++;
@@ -25,7 +23,6 @@
     }
 
     try {
-
         //submit update request
         Table table = client.getTable("User");
 
@@ -39,13 +36,10 @@
         UpdateItemOutcome outcome =  table.updateItem(updateItemSpec);
 
         System.out.println("Updated attributes: "+outcome.getItem().toJSON());
-
-
     }
     catch(AmazonServiceException ase) {
         ase.printStackTrace();
         ase.getMessage();
-
     }
     catch (Exception e) {
         e.printStackTrace();
