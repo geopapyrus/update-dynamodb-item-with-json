@@ -1,4 +1,4 @@
-# update-dynamodb-item-with-json
+# Update dynamodb item with json
 Update an existing item's attributes in DynamoDB from a json map of attributes/values
 
 Even though DynamoDB supports Item creation from json, it lacks the same functionality for updates.
